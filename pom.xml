@@ -39,6 +39,7 @@
     </dependencies>
 
     <build>
+        <finalName>poc_spring_kafka</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
