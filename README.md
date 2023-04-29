@@ -35,5 +35,3 @@ In order to run it you can make:
 ```shell
 docker compose up
 ```
-
-in order to launch Kafka and then just enter in you IDE and make `RUN`.
