@@ -1,11 +1,11 @@
-package io.renatofreire.poc_spring_kafka.Controller;
+package io.renatofreire.poc_spring_kafka.controller;
 
-import io.renatofreire.poc_spring_kafka.DTO.UserDTO;
-import io.renatofreire.poc_spring_kafka.Kafka.KafkaProducer;
+import io.renatofreire.poc_spring_kafka.model.User;
+import io.renatofreire.poc_spring_kafka.kafka.KafkaProducer;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("kafka/producer")
+@RequestMapping("/kafka/producer")
 public class ProducerController {
 
     private final KafkaProducer kafkaProducer;
@@ -21,7 +21,7 @@ public class ProducerController {
     }
 
     @PostMapping("/user")
-    public UserDTO publish(@RequestBody UserDTO user){
+    public User publish(@RequestBody User user){
         kafkaProducer.sendMessage(user.toJson());
         return user;
     }

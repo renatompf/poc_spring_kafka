@@ -1,4 +1,4 @@
-package io.renatofreire.poc_spring_kafka.Configuration;
+package io.renatofreire.poc_spring_kafka.configuration;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.context.annotation.Bean;

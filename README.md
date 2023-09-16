@@ -2,7 +2,7 @@
 # poc_spring_kafka
 
 ## Description
-POC made in Java to learn how to setup a project using [Kafka](https://kafka.apache.org/), [Zookeeper](https://zookeeper.apache.org/) and [Spring](https://spring.io/).
+POC made in Java to learn how to setup a project using [Kafka](https://kafka.apache.org/), [Zookeeper](https://zookeeper.apache.org/) and [Spring](https://spring.io/) using [MongoDB](https://www.mongodb.com/) to handle all the data.
 
 In this project, there are two endpoints, but they are very similar.
 
@@ -31,8 +31,19 @@ I'll leave an example of the body the user should use:
 ```
 
 The way the messages are consumed by the Kafka Consumer is the same for both since it receives just a string and depending
-if it can to serialize it to a structure of type **UserDTO**, it will say that received a User, otherwise it will say that
+if it can to serialize it to a structure of type **User**, it will say that received a User, otherwise it will say that
 received a simple message.
+
+To check if your user was saved correctly, then you can do the following:
+<br>Or get all users:
+```shell
+localhost:8080/saved-users
+```
+
+<br>Or get one user by his email:
+```shell
+localhost:8080/saved-users/{userEmail}
+```
 
 ## How to run it:
 

@@ -8,7 +8,7 @@ COPY pom.xml .
 RUN mvn -e -B dependency:resolve
 
 COPY src ./src
-RUN mvn package
+RUN mvn package -DskipTests
 
 ## ====== Unit Tests ====== ##
 FROM maven:3.6.3-openjdk-17 as unit_tests

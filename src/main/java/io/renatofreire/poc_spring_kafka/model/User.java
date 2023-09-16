@@ -1,18 +1,25 @@
-package io.renatofreire.poc_spring_kafka.DTO;
+package io.renatofreire.poc_spring_kafka.model;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class UserDTO {
+@Document(collection = "users")
+
+public class User {
     private String name;
+
+    @Id
     private String email;
     private Date dateOfBirth;
     private Long phoneNumber;
 
-    public UserDTO() {
+    public User() {
     }
 
-    public UserDTO(String name, String email, Date dateOfBirth, Long phoneNumber) {
+    public User(String name, String email, Date dateOfBirth, Long phoneNumber) {
         this.name = name;
         this.email = email;
         this.dateOfBirth = dateOfBirth;

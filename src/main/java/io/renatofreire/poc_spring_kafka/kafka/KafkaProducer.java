@@ -1,4 +1,4 @@
-package io.renatofreire.poc_spring_kafka.Kafka;
+package io.renatofreire.poc_spring_kafka.kafka;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
