@@ -1,0 +1,20 @@
+meta {
+  name: Create new user
+  type: http
+  seq: 2
+}
+
+post {
+  url: localhost:8080/kafka/producer/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "name":"John Smith3",
+      "dateOfBirth":"2000-01-01T10:30:00.000Z",
+      "email":"john_smith2@mail.com",
+      "phoneNumber": 9333333
+  }
+}
